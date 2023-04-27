@@ -59,7 +59,8 @@ def handler(context: dict, request: Request) -> Response:
 
     return Response(
         json={
-            "output": result,
+            # "output": result,
+            "output": {"output": result["outputs"]},
             "prompt": prompt,
             "do_sample": do_sample,
             "max_new_tokens": max_new_tokens,
